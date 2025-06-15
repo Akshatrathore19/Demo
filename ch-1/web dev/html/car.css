@@ -1,0 +1,364 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f9;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    color: #fff;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+    color: #ff5722;  /* Hover color for better contrast */
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ff5722; /* Hero heading color */
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #ccc; /* Light color for paragraph */
+}
+
+.hero button {
+    background-color: #ff5722;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.hero button:hover {
+    background-color: #e64a19;
+}
+
+/* Service Section */
+#services, #repair {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#services h2, #repair h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #333; /* Heading color for service sections */
+}
+
+.service-cards, .repair-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-card, .repair-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    width: 250px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-card h3, .repair-card h3 {
+    font-size: 22px;
+    color: #ff5722; /* Color for card headings */
+}
+
+.service-card p, .repair-card p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.service-card button, .repair-card button {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.service-card button:hover, .repair-card button:hover {
+    background-color: #e64a19;
+}
+
+/* Pricing Section */
+#pricing {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#pricing h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #ff5722; /* Pricing section heading color */
+}
+
+.pricing-table {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.price-option {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    width: 250px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.price-option h3 {
+    font-size: 22px;
+    color: #ff5722; /* Color for pricing option headings */
+}
+
+.price-option p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #555; /* Subtle color for price description */
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #ff5722; /* Contact section heading color */
+}
+
+#contact p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #333; /* Color for contact paragraph */
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #ff5722;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.contact-form button:hover {
+    background-color: #e64a19;
+}
+
+.contact-form .form-message {
+    font-size: 16px;
+    color: #28a745; /* Success message color */
+    margin-top: 20px;
+}
+
+.contact-form .form-error {
+    font-size: 16px;
+    color: #e64a19; /* Error message color */
+    margin-top: 20px;
+}
+
+
+/* Checkout Section */
+#checkout {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#checkout h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #ff5722; /* Checkout section heading color */
+}
+
+#checkout p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #333; /* Color for checkout paragraph */
+}
+
+#checkout select, #checkout input, #checkout textarea {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#checkout .checkout-options button {
+    background-color: #ff5722;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+#checkout .checkout-options button:hover {
+    background-color: #e64a19;
+}
+
+/* Car Photos Section */
+#car-photos {
+    margin: 30px 0;
+}
+
+.car-photo {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.car-image {
+    width: 100px;
+    height: 60px;
+    margin: 10px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.car-image:hover {
+    border: 2px solid #ff5722; /* Hover effect for car images */
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+}
+
+footer p {
+    margin: 0;
+    color: #ccc; /* Light color for footer text */
+}
+
+/* Franchise Section */
+#franchises {
+    padding: 50px 20px;
+    background-color: #f4f4f9;
+    text-align: center;
+}
+
+#franchises h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    color: #ff5722; /* Franchise section heading color */
+}
+
+.franchise-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.franchise {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.franchise h3 {
+    font-size: 24px;
+    color: #ff5722; /* Franchise location headings */
+    margin-bottom: 15px;
+}
+
+.franchise p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping App</title>
+    <link rel="stylesheet" href="shop.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2, h3 {
+            text-align: center;
+        }
+        .product {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0;
+            padding: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+        }
+        .product span {
+            font-weight: bold;
+        }
+        .product button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .product button:hover {
+            background-color: #218838;
+        }
+        .cart {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            background: #fff3cd;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background: #f8d7da;
+            padding: 5px;
+            margin: 5px 0;
+            border-radius: 3px;
+        }
+        strong {
+            display: block;
+            text-align: right;
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Household Shopping</h2>
+        <div id="products">
+            <div class="product">
+                <span>Rice (1kg)</span>
+                <span>₹50 <small>(10% off)</small></span>
+                <button onclick="addToCart('Rice', 50, 10)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <span>Milk (1L)</span>
+                <span>₹60 <small>(5% off)</small></span>
+                <button onclick="addToCart('Milk', 60, 5)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <span>Wheat Flour (1kg)</span>
+                <span>₹40 <small>(15% off)</small></span>
+                <button onclick="addToCart('Wheat Flour', 40, 15)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <span>Cooking Oil (1L)</span>
+                <span>₹150 <small>(8% off)</small></span>
+                <button onclick="addToCart('Cooking Oil', 150, 8)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <span>Sugar (1kg)</span>
+                <span>₹45 <small>(12% off)</small></span>
+                <button onclick="addToCart('Sugar', 45, 12)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <span>Tea Powder (500g)</span>
+                <span>₹120 <small>(10% off)</small></span>
+                <button onclick="addToCart('Tea Powder', 120, 10)">Add to Cart</button>
+            </div>
+            <div class="product">
+                <span>Salt (1kg)</span>
+                <span>₹25 <small>(5% off)</small></span>
+                <button onclick="addToCart('Salt', 25, 5)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="cart">
+            <h3>Shopping Cart</h3>
+            <ul id="cart-items"></ul>
+            <p><strong>Total: ₹<span id="total-price">0</span></strong></p>
+        </div>
+    </div>
+
+    <script>
+        let cart = [];
+        function addToCart(item, price, discount) {
+            let discountedPrice = price - (price * discount / 100);
+            cart.push({ item, price: discountedPrice });
+            updateCart();
+        }
+        function updateCart() {
+            let cartList = document.getElementById('cart-items');
+            let totalPrice = document.getElementById('total-price');
+            cartList.innerHTML = '';
+            let total = 0;
+            cart.forEach((entry) => {
+                let li = document.createElement('li');
+                li.textContent = `${entry.item} - ₹${entry.price.toFixed(2)}`;
+                cartList.appendChild(li);
+                total += entry.price;
+            });
+            totalPrice.textContent = total.toFixed(2);
+        }
+    </script>
+</body>
+</html>

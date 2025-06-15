@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Wash & Repair Services</title>
+    <link rel="stylesheet" href="car.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#repair">Repairs</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#checkout">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <h1>Welcome to Car Wash & Repair Express</h1>
+            <p>Get your car cleaned and repaired by professionals with the best service in town!</p>
+            <button onclick="window.location.href='#services'">Explore Our Services</button>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Our Car Wash Services</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <h3>Basic Wash</h3>
+                <p>A quick wash for your car's exterior.</p>
+                <button onclick="window.location.href='#checkout'">Order Now</button>
+            </div>
+            <div class="service-card">
+                <h3>Premium Wash</h3>
+                <p>Exterior and interior cleaning with wax finish.</p>
+                <button onclick="window.location.href='#checkout'">Order Now</button>
+            </div>
+            <div class="service-card">
+                <h3>Ultimate Wash</h3>
+                <p>Complete interior and exterior detailing.</p>
+                <button onclick="window.location.href='#checkout'">Order Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="repair">
+        <h2>Our Car Repair Services</h2>
+        <div class="repair-cards">
+            <div class="repair-card">
+                <h3>Engine Repair</h3>
+                <p>Get your car's engine checked and repaired by professionals.</p>
+                <button onclick="window.location.href='#checkout'">Order Now</button>
+            </div>
+            <div class="repair-card">
+                <h3>Brake Repair</h3>
+                <p>Fix and replace damaged brake systems for safer driving.</p>
+                <button onclick="window.location.href='#checkout'">Order Now</button>
+            </div>
+            <div class="repair-card">
+                <h3>AC Repair</h3>
+                <p>Fix and service your car's air conditioning system.</p>
+                <button onclick="window.location.href='#checkout'">Order Now</button>
+            </div>
+            <div class="repair-card">
+                <h3>Transmission Repair</h3>
+                <p>Service and fix transmission-related issues.</p>
+                <button onclick="window.location.href='#checkout'">Order Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing">
+        <h2>Pricing</h2>
+        <div class="pricing-table">
+            <div class="price-option">
+                <h3>Basic Wash</h3>
+                <p>Rs 150</p>
+            </div>
+            <div class="price-option">
+                <h3>Premium Wash</h3>
+                <p>Rs 300</p>
+            </div>
+            <div class="price-option">
+                <h3>Ultimate Wash</h3>
+                <p>Rs 500</p>
+            </div>
+            <div class="price-option">
+                <h3>Engine Repair</h3>
+                <p>Rs 2000</p>
+            </div>
+            <div class="price-option">
+                <h3>Brake Repair</h3>
+                <p>Rs 1200</p>
+            </div>
+            <div class="price-option">
+                <h3>AC Repair</h3>
+                <p>Rs 1500</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions? We'd love to hear from you. Please fill out the form below, and we'll get back to you as soon as possible.</p>
+    
+    <form class="contact-form" action="#" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+
+        <!-- Success or Error Message (optional) -->
+        <div class="form-message">Thank you for contacting us. We will get back to you shortly.</div>
+        <div class="form-error">Oops! Something went wrong. Please try again.</div>
+    </form>
+</section>
+
+
+    <section id="checkout">
+        <h2>Your Order</h2>
+        <p>Select your preferred services:</p>
+        
+        <!-- Car Wash Selection -->
+        <label for="car-wash">Car Wash:</label>
+        <select id="car-wash" name="car-wash">
+            <option value="">Select a wash service</option>
+            <option value="Basic Wash">Basic Wash</option>
+            <option value="Premium Wash">Premium Wash</option>
+            <option value="Ultimate Wash">Ultimate Wash</option>
+        </select>
+
+        <!-- Car Repair Selection -->
+        <label for="car-repair">Car Repair:</label>
+        <select id="car-repair" name="car-repair">
+            <option value="">Select a repair service</option>
+            <option value="Engine Repair">Engine Repair</option>
+            <option value="Brake Repair">Brake Repair</option>
+            <option value="AC Repair">AC Repair</option>
+            <option value="Transmission Repair">Transmission Repair</option>
+        </select>
+
+        <!-- Car Model Selection -->
+        <label for="car-model">Car Model:</label>
+        <select id="car-model" name="car-model" required>
+            <option value="">Select your car model</option>
+            <option value="Sedan">Sedan</option>
+            <option value="SUV">SUV</option>
+            <option value="Truck">Truck</option>
+            <option value="Convertible">Convertible</option>
+            <option value="Hatchback">Hatchback</option>
+        </select>
+
+        <!-- Car Photos Display -->
+        <div id="car-photos">
+            <h3>Choose your car:</h3>
+            <div class="car-photo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiRUKMFXv5JGCemwQrIpoqf1SZ4W4t6HWNIg&s" alt="Sedan" class="car-image" id="sedan-photo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtO9M8PCaDs3U-czDGnUJLpsB9hhQN5TPARw&s" alt="SUV" class="car-image" id="suv-photo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAh7tyEtcRpbs5-0c5o4PYrXxy9JCg_L8lhQ&s" alt="Truck" class="car-image" id="truck-photo">
+                <img src="https://imgd.aeplcdn.com/600x337/n/cw/ec/148919/amg-sl55-roadster-exterior-right-front-three-quarter-3.jpeg?isig=0&q=80" alt="Convertible" class="car-image" id="convertible-photo">
+                <img src="https://www.team-bhp.com/sites/default/files/pictures2022/2022VolkswagenGolfGTI32.jpg" alt="Hatchback" class="car-image" id="hatchback-photo">
+            </div>
+        </div>
+
+        <!-- Additional Service Options -->
+        <label for="service-time">Estimated Service Time:</label>
+        <select id="service-time" name="service-time">
+            <option value="1 hour">1 hour</option>
+            <option value="2 hours">2 hours</option>
+            <option value="3 hours">3 hours</option>
+        </select>
+
+        <label for="car-condition">Car Condition:</label>
+        <select id="car-condition" name="car-condition">
+            <option value="New">New</option>
+            <option value="Used">Used</option>
+            <option value="Old">Old</option>
+        </select>
+
+        <div class="checkout-options">
+            <button onclick="window.location.href='#services'">Back to Services</button>
+            <button onclick="alert('Thank you for your order!')">Proceed to Payment</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Car Wash & Repair Express</p>
+    </footer>
+
+    <script src="car.js"></script>
+</body>
+</html>
+
+    
+    <!-- Added Franchise Section -->
+    <section id="franchises">
+        <h2>Our Franchises Across India</h2>
+        <p>We have branches in various cities across India. Find the nearest one below:</p>
+        <div class="franchise-list">
+            <div class="franchise">
+                <h3>Delhi</h3>
+                <p>Location: Connaught Place, New Delhi</p>
+                <p>Contact: +91 98765 43210</p>
+                <p>Operating Hours: 9:00 AM - 8:00 PM</p>
+            </div>
+            <div class="franchise">
+                <h3>Mumbai</h3>
+                <p>Location: Bandra West, Mumbai</p>
+                <p>Contact: +91 87654 32100</p>
+                <p>Operating Hours: 9:00 AM - 8:00 PM</p>
+            </div>
+            <div class="franchise">
+                <h3>Bangalore</h3>
+                <p>Location: Whitefield, Bangalore</p>
+                <p>Contact: +91 99887 66544</p>
+                <p>Operating Hours: 9:00 AM - 8:00 PM</p>
+            </div>
+            <div class="franchise">
+                <h3>Chennai</h3>
+                <p>Location: Anna Nagar, Chennai</p>
+                <p>Contact: +91 98876 54432</p>
+                <p>Operating Hours: 9:00 AM - 8:00 PM</p>
+            </div>
+            <!-- Add more franchise locations as needed -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Car Wash & Repair Express</p>
+    </footer>
+
+    <script src="car.js"></script>
+</body>
+</html>
+
